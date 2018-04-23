@@ -18,8 +18,11 @@ namespace Library.Controllers
             return db.Books.ToList();
         }
 
+        
         public IHttpActionResult Post(string title, string yearpublished, string condition, string isbn, bool ischeckedout, DateTime duebackdate, int genreid, int authorid)
         {
+
+
             var newBook = new Book
             {
                 Title = title,
@@ -35,5 +38,7 @@ namespace Library.Controllers
             db.SaveChanges();
             return Ok(newBook);
         }
+
+
     }
 }
