@@ -186,6 +186,8 @@
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookFactoryController.cs" />
+    <Compile Include="Controllers\CheckInController.cs" />
+    <Compile Include="Controllers\CheckOutController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -214,13 +216,24 @@
     <Compile Include="Migrations\201804221704469_ChangedVirtualTablePostBooks.Designer.cs">
       <DependentUpon>201804221704469_ChangedVirtualTablePostBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804231852104_ChangedBool.cs" />
+    <Compile Include="Migrations\201804231852104_ChangedBool.Designer.cs">
+      <DependentUpon>201804231852104_ChangedBool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231921320_AddedLedger.cs" />
+    <Compile Include="Migrations\201804231921320_AddedLedger.Designer.cs">
+      <DependentUpon>201804231921320_AddedLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\CheckOut.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View Models\CheckOut.cs" />
+    <Compile Include="View Models\BookViewModel.cs" />
+    <Compile Include="View Models\CheckInMessage.cs" />
+    <Compile Include="View Models\CheckOutViewModel.cs" />
+    <Compile Include="View Models\CheckOutMessage.cs" />
     <Compile Include="View Models\PostBook.cs" />
     <Compile Include="View Models\SearchParams.cs" />
   </ItemGroup>
@@ -231,6 +244,10 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -255,6 +272,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -307,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804221704469_ChangedVirtualTablePostBooks.resx">
       <DependentUpon>201804221704469_ChangedVirtualTablePostBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231852104_ChangedBool.resx">
+      <DependentUpon>201804231852104_ChangedBool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231921320_AddedLedger.resx">
+      <DependentUpon>201804231921320_AddedLedger.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

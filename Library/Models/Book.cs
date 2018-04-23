@@ -12,7 +12,7 @@ namespace Library.Models
         public string YearPublished { get; set; }
         public string Condition { get; set; }
         public string ISBN { get; set; }
-        public bool IsCheckedOut { get; set; }
+        public bool IsCheckedOut { get; set; } = false;
         public DateTime? DueBackDate { get; set; }
 
         public Genre Genre { get; set; }

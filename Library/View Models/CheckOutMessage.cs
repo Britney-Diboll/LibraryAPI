@@ -5,8 +5,9 @@ using System.Web;
 
 namespace Library.View_Models
 {
-    public class CheckOut
+    public class CheckOutMessage
     {
-        public string Email { get; set; }
+        public string Message { get; set; }
+        public DateTime DueBackDate { get; set; }
     }
 }
