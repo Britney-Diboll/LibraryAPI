@@ -1,10 +1,33 @@
-﻿<div class="jumbotron" ng-app="LibraryApp" ng-controller="mainController">
+﻿
 
-    <p>Search below for a book. You can search by book title, author name or genre!</p>
-    <input ng-model=""/>
-    <button ng-click="">Search</button>
-    <h3>All Books in this library:</h3>
-    <div ng-repeat="book in books track by $index">
-        {{book.BookName}} is a {{book.GenreName}} book written by {{book.AuthorName}}
+<div class="jumbotron" ng-app="LibraryApp" ng-controller="mainController">
+    <h1>{{loaded}}</h1>
+    <div>
+        <input type="text" name="" value="" ng-model="inputTitle" placeholder="Search by title" />
+        <button ng-click="searchT()">Search</button>
     </div>
+    <br />
+
+    <div class="panel panel-primary" >
+        <div class="panel-heading"> Books in Library</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="col-md-4" scope="col">Book Title</th>
+                    <th class="col-md-4" scope="col">Author</th>
+                    <th class="col-md-4" scope="col">Genre</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="book in books track by $index">
+            <td> {{book.Title}}</td>
+            <td>{{book.Author.Name}}</td>
+            <td>{{book.Genre.Name}}</td>
+            <td>
+            <button class="btn btn-success">Check In</button> <br />
+            <button class="btn btn-primary"> Check Out </button>
+            </td>
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
